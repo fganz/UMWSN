@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fb150f7-ce31-494f-a88f-6c8b985fd174" name="Default" comment="core components">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/UMWSN.iml" afterPath="$PROJECT_DIR$/.idea/UMWSN.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="UMWSN.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +28,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="3" selection-start="15" selection-end="15" vertical-scroll-proportion="0.08994709">
+            <state line="2" column="19" selection-start="31" selection-end="31" vertical-scroll-proportion="0.08994709">
               <folding />
             </state>
           </provider>
@@ -312,7 +312,11 @@
       <created>1335799127922</created>
       <updated>1335799127922</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="core components">
+      <created>1335799338476</created>
+      <updated>1335799338476</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -428,7 +432,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="3" selection-start="15" selection-end="15" vertical-scroll-proportion="0.08994709">
+        <state line="2" column="19" selection-start="31" selection-end="31" vertical-scroll-proportion="0.08994709">
           <folding />
         </state>
       </provider>
