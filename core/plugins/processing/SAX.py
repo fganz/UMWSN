@@ -1,4 +1,4 @@
-from core import SensorController
+
 
 __author__ = 'frieder'
 import string
@@ -6,7 +6,7 @@ import numpy as np
 import pandas
 import matplotlib.pyplot as plt
 from scipy.stats import norm
-
+import SensorController
 
 def convertToSax(phrase_length, symbol_count, d1):
     """

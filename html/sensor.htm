@@ -1,0 +1,44 @@
+<html>
+<head>
+<script type="text/javascript"
+  src="static/dygraph-combined.js"></script>
+</head>
+<div id="graphdiv2"
+  style="width:500px; height:300px;"></div>
+<div id="graphdiv3"
+     style="width:500px; height:300px;"></div>
+<script type="text/javascript">
+  g2 = new Dygraph(
+    document.getElementById("graphdiv2"),
+    "http://localhost:8080/data/sensor/${id}", // path to CSV file
+    {}          // options
+  );
+  setInterval(function() {
+
+        g2.updateOptions( { 'file': "http://localhost:8080/data/sensor/${id}" } );
+      }, 3000);
+
+  g3 = new Dygraph(
+          document.getElementById("graphdiv3"),
+          "http://localhost:8080/data/sensorSax/${id}", // path to CSV file
+          {}          // options
+  );
+  setInterval(function() {
+
+      g3.updateOptions( { 'file': "http://localhost:8080/data/sensorSax/${id}" } );
+  }, 3000);
+</script>
+
+<form method='POST' action='/'>
+    <select name='selection'>
+       %for a in thres:
+        <option> ${a} </option>
+        %endfor
+     </select>
+    <input type='text' name=timeframe value=${timeframe}>
+    <input type='submit' value='submit'>
+</form>
+
+</form>
+</body>
+</html>

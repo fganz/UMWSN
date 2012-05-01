@@ -16,7 +16,7 @@ class TestBedNode(Node):
         self.location = location
         self.type = "CCSR TestBed Source Node"
     def getSensorValue(self):
-        url = INTERNAL_URL % self.id
+        url = EXTERNAL_URL % self.id
         dom = minidom.parse(urllib.urlopen(url))
         for n in dom.getElementsByTagName("reading"):
             return n.getElementsByTagName(self.sensor)[0].firstChild.data

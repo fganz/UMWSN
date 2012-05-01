@@ -63,5 +63,5 @@ def whereIsItMoving():
     return res
 
 def mapSensorToRoom(id):
-    roomMap = {"21":"Desk Frieder","2":"Meeting Room E1","49": "Meeting Room E24", "116":"Meeting Room E6", "53F6":"SunSpot 1","4AB6":"SunSpot 2", "1":"Weather Guildford", "5":"Weather Santander"}
+    roomMap = {"1000":"Random","21":"Desk Frieder","2":"Meeting Room E1","49": "Meeting Room E24", "116":"Meeting Room E6", "53F6":"SunSpot 1","4AB6":"SunSpot 2", "1":"Weather Guildford", "5":"Weather Santander"}
     return roomMap[id]
