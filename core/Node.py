@@ -2,9 +2,7 @@ __author__ = 'frieder'
 
 
 import random
-import Loop
-
-
+import EventController
 
 class Node:
     def __init__(self,id,samplingRate,location = "Santander",):
@@ -26,7 +24,7 @@ class Node:
         return self.location
 
     def getDescription(self):
-        return Loop.mapSensorToRoom(self.id)
+        return EventController.mapSensorToRoom(self.id)
 
     def getPluginType(self):
         return self.type

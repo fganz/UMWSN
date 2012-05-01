@@ -1,10 +1,9 @@
+from core import Utils, SensorController
 from core.Node import Node
 
 __author__ = 'frieder'
 import socket
 import sys
-
-import Loop1
 from threading import Thread
 
 
@@ -30,7 +29,7 @@ class SunSpotNodeWrapper():
         try:
             self.sock.connect((host,port))
         except socket.error:
-            print "Connection refused";  sys.exit()
+            print "Connection refused could not connect to SunSpot Wrapper"
 
     def read(self):
         file = self.sock.makefile()
@@ -44,8 +43,8 @@ class SunSpotNodeWrapper():
 
                 if n not in self.spotNodes:
                     self.spotNodes.append(n)
-                    Loop1.Timer(1,n).start()
-                    Loop1.sensors.append(n)
+                    Utils.Timer(1,n).start()
+                    SensorController.sensors.append(n)
 
             if line.startswith("V"):
                 splitted =line.split(":")

@@ -1,14 +1,17 @@
+from core import SensorController
+
 __author__ = 'frieder'
 import string
 import numpy as np
-import Loop
 import pandas
 import matplotlib.pyplot as plt
 from scipy.stats import norm
-import random
 
 
 def convertToSax(phrase_length, symbol_count, d1):
+    """
+    Convert timeseries data to sax repesentation
+    """
     a = d1
     b = d1
     data = np.array([a, b])
@@ -107,12 +110,12 @@ def compareTwoRooms(id1, id2):
     symbol_count = 6
     phrase_length = 12
     samples = 30
-    entries = Loop.getEntriesFromId(id1, samples, 1)
+    entries = SensorController.getEntriesFromId(id1, samples, 1)
     nd = []
     for e in entries:
         nd.append(int(e["value"]))
 
-    entries = Loop.getEntriesFromId(id2, samples, 1)
+    entries = SensorController.getEntriesFromId(id2, samples, 1)
     nd2 = []
     for e in entries:
         nd2.append(int(e["value"]))
@@ -137,7 +140,7 @@ def checkEqual3(lst):
     return lst[1:] == lst[:-1]
 
 def check(id):
-    entries = Loop.getEntriesFromId(id,10,1)
+    entries = SensorController.getEntriesFromId(id,10,1)
     nd = []
     for e in entries:
             nd.append((float(e["value"])))
@@ -170,5 +173,5 @@ def test():
     ts2.plot()
     plt.show()
 
-test()
+#test()
 

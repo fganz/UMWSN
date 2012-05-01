@@ -4,7 +4,6 @@ __author__ = 'frieder'
 import pywapi
 
 class WebNode(Node):
-
     def __init__(self,id,samplingRate,location="Guildford"):
         self.samplingRate = samplingRate
         self.id = id
